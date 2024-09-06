@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.3 on linux)" generated="2024-09-06T14:37:35.337525" rpa="false" schemaversion="5">
+<suite id="s1" name="saucedemo test-Login" source="/home/sarah/Documentos/RobotFramework/saucedemo_test-Login.robot">
+<test id="s1-t1" name="Scenario: Successful Login to Swag Labs" line="53">
+<kw name="Open Browser And Access Site">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-06T14:37:35.421315" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-06T14:37:35.421120" elapsed="1.085582"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-06T14:37:36.506887" elapsed="0.028165"/>
+</kw>
+<status status="PASS" start="2024-09-06T14:37:35.420627" elapsed="1.114634"/>
+</kw>
+<kw name="Fill Login Form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-06T14:37:36.536561" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>${USERNAME_ID}</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-06T14:37:36.536169" elapsed="0.077826"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-06T14:37:36.614709" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>${PASSWORD_ID}</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-06T14:37:36.614318" elapsed="0.049349"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-06T14:37:36.664253" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>${LOGIN_BTN_ID}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-06T14:37:36.663907" elapsed="0.060839"/>
+</kw>
+<status status="PASS" start="2024-09-06T14:37:36.535706" elapsed="0.189177"/>
+</kw>
+<doc>Verify that a user with valid credentials can log in successfully</doc>
+<status status="PASS" start="2024-09-06T14:37:35.420090" elapsed="1.304999"/>
+</test>
+<test id="s1-t2" name="Scenario: Login with Invalid Credentials" line="58">
+<kw name="Open Browser And Access Site">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-06T14:37:36.726446" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-06T14:37:36.726205" elapsed="0.763237"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-06T14:37:37.489624" elapsed="0.018374"/>
+</kw>
+<status status="PASS" start="2024-09-06T14:37:36.725906" elapsed="0.782254"/>
+</kw>
+<kw name="Fill Login Invalid Form">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-06T14:37:37.508853" level="INFO">Typing text 'standard_user1' into text field 'id=user-name'.</msg>
+<arg>${USERNAME_ID}</arg>
+<arg>standard_user1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-06T14:37:37.508639" elapsed="0.069338"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-06T14:37:37.578299" level="INFO">Typing text 'secret_sauce1' into text field 'id=password'.</msg>
+<arg>${PASSWORD_ID}</arg>
+<arg>secret_sauce1</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-06T14:37:37.578121" elapsed="0.045425"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-06T14:37:37.623852" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>${LOGIN_BTN_ID}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-06T14:37:37.623684" elapsed="0.039892"/>
+</kw>
+<status status="PASS" start="2024-09-06T14:37:37.508407" elapsed="0.155301"/>
+</kw>
+<doc>Verify that an error message is shown when invalid credentials are used</doc>
+<status status="PASS" start="2024-09-06T14:37:36.725403" elapsed="0.938465"/>
+</test>
+<test id="s1-t3" name="Scenario: Leave Login Form Fields Empty" line="63">
+<kw name="Open Browser And Access Site">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-06T14:37:37.664798" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-06T14:37:37.664638" elapsed="0.737265"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-06T14:37:38.402054" elapsed="0.015094"/>
+</kw>
+<status status="PASS" start="2024-09-06T14:37:37.664416" elapsed="0.752845"/>
+</kw>
+<kw name="Login Form Fields Empty">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-06T14:37:38.418284" level="INFO">Typing text '' into text field 'id=user-name'.</msg>
+<arg>${USERNAME_ID}</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-06T14:37:38.417845" elapsed="0.056749"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-06T14:37:38.475129" level="INFO">Typing text '' into text field 'id=password'.</msg>
+<arg>${PASSWORD_ID}</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-06T14:37:38.474742" elapsed="0.036784"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-06T14:37:38.511888" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>${LOGIN_BTN_ID}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-06T14:37:38.511694" elapsed="0.039239"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.${ERROR_MESSAGE_CLASS}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-06T14:37:38.551123" elapsed="0.010227"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-09-06T14:37:38.576535" level="INFO">Element 'css:.error-message-container h3' contains text 'Epic sadface: Username is required'.</msg>
+<arg>css:.${ERROR_MESSAGE_CLASS} h3</arg>
+<arg>${USERNAME_REQUIRED_MSG}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-09-06T14:37:38.561481" elapsed="0.015124"/>
+</kw>
+<status status="PASS" start="2024-09-06T14:37:38.417514" elapsed="0.159171"/>
+</kw>
+<doc>Verify that an error message is shown when both fields are left empty</doc>
+<status status="PASS" start="2024-09-06T14:37:37.664060" elapsed="0.912749"/>
+</test>
+<test id="s1-t4" name="Scenario: Leave Username Field Empty" line="68">
+<kw name="Open Browser And Access Site">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-06T14:37:38.577570" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-06T14:37:38.577430" elapsed="0.724837"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-06T14:37:39.302425" elapsed="0.016949"/>
+</kw>
+<status status="PASS" start="2024-09-06T14:37:38.577234" elapsed="0.742240"/>
+</kw>
+<kw name="Login Form Fields with Username Empty">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-06T14:37:39.320864" level="INFO">Typing text '' into text field 'id=user-name'.</msg>
+<arg>${USERNAME_ID}</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-06T14:37:39.320124" elapsed="0.059186"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-06T14:37:39.379643" level="INFO">Typing text '123' into text field 'id=password'.</msg>
+<arg>${PASSWORD_ID}</arg>
+<arg>123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-06T14:37:39.379464" elapsed="0.043682"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-06T14:37:39.423459" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>${LOGIN_BTN_ID}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-06T14:37:39.423282" elapsed="0.036015"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.${ERROR_MESSAGE_CLASS}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-06T14:37:39.459459" elapsed="0.012644"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-09-06T14:37:39.486814" level="INFO">Element 'css:.error-message-container h3' contains text 'Epic sadface: Username is required'.</msg>
+<arg>css:.${ERROR_MESSAGE_CLASS} h3</arg>
+<arg>${USERNAME_REQUIRED_MSG}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-09-06T14:37:39.472251" elapsed="0.014651"/>
+</kw>
+<status status="PASS" start="2024-09-06T14:37:39.319727" elapsed="0.167269"/>
+</kw>
+<doc>Verify that an error message is shown when the username field is left empty</doc>
+<status status="PASS" start="2024-09-06T14:37:38.576951" elapsed="0.910222"/>
+</test>
+<test id="s1-t5" name="Scenario: Leave Password Field Empty" line="73">
+<kw name="Open Browser And Access Site">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-06T14:37:39.488147" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-06T14:37:39.487940" elapsed="0.778116"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-06T14:37:40.266266" elapsed="0.011841"/>
+</kw>
+<status status="PASS" start="2024-09-06T14:37:39.487681" elapsed="0.790514"/>
+</kw>
+<kw name="Fill Login Form with Password Empty">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-06T14:37:40.278754" level="INFO">Typing text 'user' into text field 'id=user-name'.</msg>
+<arg>${USERNAME_ID}</arg>
+<arg>user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-06T14:37:40.278562" elapsed="0.066476"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-06T14:37:40.345570" level="INFO">Typing text '' into text field 'id=password'.</msg>
+<arg>${PASSWORD_ID}</arg>
+<arg>${EMPTY}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-06T14:37:40.345178" elapsed="0.039839"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-06T14:37:40.385398" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>${LOGIN_BTN_ID}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-06T14:37:40.385173" elapsed="0.034848"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>css:.${ERROR_MESSAGE_CLASS}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-09-06T14:37:40.420309" elapsed="0.012592"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2024-09-06T14:37:40.446137" level="INFO">Element 'css:.error-message-container h3' contains text 'Epic sadface: Password is required'.</msg>
+<arg>css:.${ERROR_MESSAGE_CLASS} h3</arg>
+<arg>${PASSWORD_REQUIRED_MSG}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2024-09-06T14:37:40.433051" elapsed="0.013159"/>
+</kw>
+<status status="PASS" start="2024-09-06T14:37:40.278375" elapsed="0.167911"/>
+</kw>
+<doc>Verify that an error message is shown when the password field is left empty</doc>
+<status status="PASS" start="2024-09-06T14:37:39.487356" elapsed="0.959062"/>
+</test>
+<status status="PASS" start="2024-09-06T14:37:35.338279" elapsed="5.108453"/>
+</suite>
+<statistics>
+<total>
+<stat pass="5" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="5" fail="0" skip="0" id="s1" name="saucedemo test-Login">saucedemo test-Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

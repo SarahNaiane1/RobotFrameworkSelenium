@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0.1 (Python 3.12.3 on linux)" generated="2024-09-06T17:26:25.964392" rpa="false" schemaversion="5">
+<suite id="s1" name="Products Tests" source="/home/sarah/Documentos/RobotFramework/tests/products_tests.robot">
+<test id="s1-t1" name="Scenario: Successful Login to Swag Labs and Validation Page of Products" line="22">
+<kw name="Login With Valid Credentials" owner="login_keywords">
+<kw name="Open Browser And Access Site" owner="login_keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-09-06T17:26:26.067543" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>${URL_SITE}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-09-06T17:26:26.067034" elapsed="1.113674"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-09-06T17:26:27.181085" elapsed="0.024855"/>
+</kw>
+<status status="PASS" start="2024-09-06T17:26:26.066285" elapsed="1.140089"/>
+</kw>
+<kw name="Fill Login Form" owner="login_keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-06T17:26:27.207498" level="INFO">Typing text 'standard_user' into text field 'id=user-name'.</msg>
+<arg>${USERNAME_ID}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-06T17:26:27.207082" elapsed="0.084158"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-09-06T17:26:27.291922" level="INFO">Typing text 'secret_sauce' into text field 'id=password'.</msg>
+<arg>${PASSWORD_ID}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-06T17:26:27.291556" elapsed="0.056123"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-09-06T17:26:27.348162" level="INFO">Clicking button 'id=login-button'.</msg>
+<arg>${LOGIN_BTN_ID}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-09-06T17:26:27.347918" elapsed="0.058683"/>
+</kw>
+<arg>${VALID_USERNAME}</arg>
+<arg>${VALID_PASSWORD}</arg>
+<status status="PASS" start="2024-09-06T17:26:27.206644" elapsed="0.200142"/>
+</kw>
+<status status="PASS" start="2024-09-06T17:26:26.065756" elapsed="1.341112"/>
+</kw>
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2024-09-06T17:26:27.407564" level="INFO">Opening url 'https://www.saucedemo.com/inventory.html'</msg>
+<arg>https://www.saucedemo.com/inventory.html</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2024-09-06T17:26:27.407242" elapsed="0.044002"/>
+</kw>
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2024-09-06T17:26:27.451783" elapsed="0.074605"/>
+</kw>
+<doc>Verify that a user with valid credentials can log in successfully and navigate to the products page</doc>
+<status status="PASS" start="2024-09-06T17:26:26.065105" elapsed="1.461586"/>
+</test>
+<status status="PASS" start="2024-09-06T17:26:25.966340" elapsed="1.560889"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Products Tests">Products Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
